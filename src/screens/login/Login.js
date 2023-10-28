@@ -22,7 +22,7 @@ function Login() {
          password: password,
       };
       axios
-         .post(`${process.env.REACT_APP_BACKEND_API_URL}/user/login`, userObj)
+         .post(`${process.env.REACT_APP_BACKEND_API_URL}user/login`, userObj)
          .then((resp) => {
             if(resp.data.status===200){
                window.localStorage.setItem("token", resp.data.data.token)
