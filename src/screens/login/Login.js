@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
+   const navigate = useNavigate()
 
    const handleEmailChange = (e) => {
       setEmail(e.target.value);
@@ -26,7 +27,7 @@ function Login() {
          .then((resp) => {
             if(resp.data.status===200){
                window.localStorage.setItem("token", resp.data.data.token)
-               window.location.href = "/home"
+               navigate("/home");
             }else{
                alert(resp.data.message);
             }

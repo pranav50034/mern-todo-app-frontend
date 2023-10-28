@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 
 function SignUp() {
@@ -11,6 +11,8 @@ function SignUp() {
       password: "",
       confirmPassword: "",
    });
+
+   const navigate = useNavigate()
 
    const handleChange = (e) => {
       const { name, value } = e.target;
@@ -37,7 +39,7 @@ function SignUp() {
             .then((resp) => {
                alert(resp.data.message)
                if(resp.data.status===201){
-                  window.location.href = "/login"
+                  navigate("/login")
                }
             })
             .catch((err) => {
