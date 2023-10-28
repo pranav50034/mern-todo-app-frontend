@@ -1,0 +1,83 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home > p:nth-child(1) {
+  color: red;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: .6rem;
+}
+
+.home > p:nth-child(2) {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 5.5rem;
+  margin-bottom: 3rem;
+}
+
+form {
+  position: relative;
+}
+
+form input {
+  width: 500px;
+  padding: .5rem 2rem;
+  /* border-radius: 50px; */
+  border: none;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+form button {
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: lime;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+form button:hover {
+  font-weight: 500;
+  scale: 1.1;
+}
+
+form #placeholder {
+  position: absolute;
+  top: 22px;
+  left: 32.5px;
+  font-size: 1.6rem;
+  opacity: .6;
+  transition: all .4s ease-in-out;
+}
+
+input:focus + #placeholder {
+    translate: 0 -30px
+  }
+  
+  input:valid + #placeholder {
+  translate: 0 -30px
+
+}
+
+form>label {
+  margin-right: 1rem;
+}
+
+#date-input {
+  width: 120px;
+  font-size: 1rem;
+  padding: 0;
+  margin-left: 1rem;
+}

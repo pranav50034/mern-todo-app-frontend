@@ -1,0 +1,19 @@
+.todo {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+table {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+table .interactive-td {
+    cursor: pointer;
+}
+
+table .interactive-td:hover {
+    font-weight: 600;
+} 
